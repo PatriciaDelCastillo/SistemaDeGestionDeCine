@@ -1,0 +1,37 @@
+<h2>Lista de Peliculas</h2>
+<table class="table table-striped">
+  <thead class="table-dark">
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Nombre</th>
+      <th scope="col">Titulo Original</th>
+      <th scope="col">Año de Estreno</th>
+      <th scope="col">Duracion</th>
+      <th scope="col">Fecha de Ingreso</th>
+      <th scope="col">Disponible</th>
+      <th scope="col">Genero</th>
+      <th scope="col">Calificacion</th>
+      <th scope="col">Pais</th>
+      <th scope="col">Idioma</th>
+      <th scope="col"></th>
+      <th scope="col"></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let pelicula of peliculas">
+      <th scope="row">{{ pelicula.id }}</th>
+      <td>{{ pelicula.nombre }}</td>
+      <td>{{ pelicula.tituloOriginal }}</td>
+      <td>{{ pelicula.anioEstreno }}</td>
+      <td>{{ pelicula.duracion }}</td>
+      <td>{{ pelicula.fechaIngreso }}</td>
+      <td>{{ pelicula.disponible }}</td>
+      <td>{{ pelicula.genero.nombre }}</td>
+      <td>{{ pelicula.calificacion.calificacion }}</td>
+      <td>{{ pelicula.paisDeOrigen.nombre }}</td>
+      <td>{{ pelicula.paisDeOrigen.idioma }}</td>
+      <td><button>ELIMINAR</button></td>
+      <td><button>EDITAR</button></td>
+    </tr>
+  </tbody>
+</table>
